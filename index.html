@@ -1,0 +1,279 @@
+<!-- =========================
+  index.html
+  (Put this in the same folder as styles.css + script.js + your images)
+========================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Accesstutors • Get Started</title>
+
+  <!-- Font Awesome -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- ===================== NAV ===================== -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Accesstutors home">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Access<b>tutors</b></span>
+      </a>
+
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="#top" class="active">Home</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#how">How It Works</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn ghost" id="btnDemo">
+          <i class="fa-solid fa-mobile-screen"></i> Live Demo
+        </button>
+        <button class="btn primary" id="btnSignIn">Sign in</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <main class="hero" aria-label="Hero">
+    <div class="container hero-grid">
+      <!-- LEFT -->
+      <section class="hero-copy">
+        <h1>
+          Expert Tutors.<br/>
+          <span class="accent">Delivering Better Results.</span>
+        </h1>
+
+        <p>
+          Access top subject experts for personalized homework, textbook walkthroughs,
+          and testing support for learners of all grade levels—anytime, anywhere.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn primary" id="btnGetStarted">
+            Get Started <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Video call image (your 4th attached image) -->
+        <div class="media-callout" aria-label="Live online tutoring preview">
+          <div class="media-img" role="img" aria-label="Online tutor session preview"
+               style="background-image:url('./tutor-video-call.jpeg');"></div>
+          <div class="media-text">
+            <div class="media-pill"><i class="fa-solid fa-video"></i> Live 1-on-1</div>
+            <strong>See your tutor, share your work.</strong>
+            <span>Chat, screenshare, and get help in minutes.</span>
+          </div>
+        </div>
+
+        <!-- 3 mini feature cards -->
+        <div class="feature-row" id="subjects" aria-label="Key benefits">
+          <div class="mini-card">
+            <div class="icon red"><i class="fa-solid fa-user-check"></i></div>
+            <h3>Expert Tutors</h3>
+            <p>Top-rated tutors ready to help anytime.</p>
+          </div>
+          <div class="mini-card">
+            <div class="icon"><i class="fa-solid fa-clock"></i></div>
+            <h3>24/7 Homework Help</h3>
+            <p>Get instant support day or night.</p>
+          </div>
+          <div class="mini-card">
+            <div class="icon"><i class="fa-solid fa-books"></i></div>
+            <h3>All Subjects, All Ages</h3>
+            <p>Tutoring available in any subject, for any grade.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT: Varsity-style form -->
+      <aside class="hero-right" aria-label="Get Started form">
+        <div class="vt-form" id="vtForm">
+          <div class="vt-card">
+            <div class="vt-topbar">
+              <div class="vt-title">Get Started in <b>60 Seconds</b></div>
+            </div>
+
+            <div class="vt-body">
+              <div class="vt-steprow">
+                <div class="vt-steptext">
+                  <span class="vt-step">Step <b id="vtStepNum">1</b> of <b>3</b></span>
+                  <span class="vt-stepbadge" id="vtStepBadge">Grade</span>
+                </div>
+
+                <div class="vt-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="33">
+                  <div class="vt-progress-fill" id="vtProgressFill" style="width:33%"></div>
+                  <div class="vt-progress-dot" id="vtProgressDot" style="left:33%"></div>
+                </div>
+              </div>
+
+              <h3 class="vt-h3" id="vtHeading">Select Grade Level</h3>
+              <p class="vt-sub" id="vtSub">Choose your grade level so we can match you with the best tutor.</p>
+
+              <!-- Step 1 -->
+              <div class="vt-grid" id="vtStep1" data-step="1">
+                <button class="vt-choice" type="button" data-value="Elementary School">
+                  <span>Elementary School</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="vt-choice" type="button" data-value="College / University">
+                  <span>College / University</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="vt-choice" type="button" data-value="Middle School">
+                  <span>Middle School</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="vt-choice" type="button" data-value="Graduate School">
+                  <span>Graduate School</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="vt-choice" type="button" data-value="High School">
+                  <span>High School</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="vt-choice" type="button" data-value="Professional">
+                  <span>Professional</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="vt-choice vt-wide" type="button" data-value="SAT / ACT">
+                  <span>SAT / ACT</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="vt-grid vt-hidden" id="vtStep2" data-step="2">
+                <button class="vt-choice" type="button" data-value="Math">
+                  <span>Math</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="vt-choice" type="button" data-value="Science">
+                  <span>Science</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="vt-choice" type="button" data-value="English / Writing">
+                  <span>English / Writing</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="vt-choice" type="button" data-value="History / Social Studies">
+                  <span>History / Social Studies</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="vt-choice" type="button" data-value="Foreign Language">
+                  <span>Foreign Language</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="vt-choice" type="button" data-value="Computer Science">
+                  <span>Computer Science</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="vt-choice vt-wide" type="button" data-value="Test Prep">
+                  <span>Test Prep</span><i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="vt-hidden" id="vtStep3" data-step="3">
+                <div class="vt-fields">
+                  <label class="vt-label">
+                    <span>Name</span>
+                    <input class="vt-input" id="vtName" type="text" placeholder="Your name" autocomplete="name" />
+                  </label>
+
+                  <label class="vt-label">
+                    <span>Email</span>
+                    <input class="vt-input" id="vtEmail" type="email" placeholder="you@email.com" autocomplete="email" />
+                  </label>
+
+                  <label class="vt-label">
+                    <span>Phone (optional)</span>
+                    <input class="vt-input" id="vtPhone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" />
+                  </label>
+                </div>
+
+                <div class="vt-summary" id="vtSummary" aria-live="polite"></div>
+              </div>
+
+              <div class="vt-actions">
+                <button class="vt-back" id="vtBack" type="button" disabled>
+                  <i class="fa-solid fa-arrow-left"></i> Back
+                </button>
+
+                <button class="vt-continue" id="vtContinue" type="button">
+                  Continue <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+
+              <div class="vt-note" id="vtNote">Free • No credit card required</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ===================== MID SECTION (Background uses 3rd image) ===================== -->
+  <section class="mid" id="how" aria-label="How it works"
+           style="--mid-bg:url('./child-studying.png');">
+    <div class="container mid-inner">
+      <div class="mid-head">
+        <h2>Get Homework Help Anytime, Anywhere</h2>
+        <p>Personalized help with homework, studies, and test prep—on your schedule.</p>
+      </div>
+
+      <div class="mid-cards">
+        <article class="how-card">
+          <div class="how-ic"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3>Pick Your Subject</h3>
+          <p>Math, science, English, SAT prep, and more—choose what you need right now.</p>
+        </article>
+
+        <article class="how-card">
+          <div class="how-ic"><i class="fa-solid fa-user-group"></i></div>
+          <h3>Match with Your Tutor</h3>
+          <p>We match you with vetted tutors based on level, topic, and availability.</p>
+        </article>
+
+        <article class="how-card">
+          <div class="how-ic"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Start Learning Fast</h3>
+          <p>Chat, upload problems, or book a session—get help in minutes.</p>
+        </article>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <div class="quote">
+          <p>“Accesstutors is a lifesaver. My son gets immediate help with his homework and test prep, no matter the hour.”</p>
+          <small>— Mark S., Parent</small>
+        </div>
+      </div>
+
+      <!-- Trusted by logos -->
+      <div class="trusted" aria-label="Trusted by">
+        <div class="trusted-title">Trusted by</div>
+        <div class="trusted-logos">
+          <span class="logo-pill">Kaplan</span>
+          <span class="logo-pill">The Princeton Review</span>
+          <span class="logo-pill">McGraw Hill</span>
+          <span class="logo-pill">Pearson</span>
+          <span class="logo-pill">Barron’s</span>
+          <span class="logo-pill">ETS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BOTTOM STRIP ===================== -->
+  <section class="bottom-strip" aria-label="Bottom highlights">
+    <div class="container bottom-grid">
+      <div class="bitem"><i class="fa-solid fa-book"></i><div><strong>200+ Subjects</strong><span>All grades</span></div></div>
+      <div class="bitem"><i class="fa-solid fa-stopwatch"></i><div><strong>Fast Matching</strong><span>Minutes</span></div></div>
+      <div class="bitem"><i class="fa-solid fa-shield"></i><div><strong>Secure & Safe</strong><span>Private</span></div></div>
+      <div class="bitem"><i class="fa-solid fa-tags"></i><div><strong>Affordable Plans</strong><span>Flexible</span></div></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Accesstutors • Online homework, textbook, and test support • 24/7
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
